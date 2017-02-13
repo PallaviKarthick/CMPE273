@@ -39,7 +39,7 @@ print "\n"
 
 # print PID, Local Address , Remote Address and Status of connection
 templ = "%-8s %-20s %-25s %-10s \n"
-print(templ % ("pid", "laddr", "raddr", "status"))
+print templ % ("pid", "laddr", "raddr", "status")
 #print  """"pid","laddr","raddr","status" """
 
 for pid, value in ls_No_Of_Conn:
@@ -47,4 +47,4 @@ for pid, value in ls_No_Of_Conn:
         if pid == (item.__dict__['pid']):
             print '"%d" , "%s" , "%s" , "%s"' %(item.__dict__['pid'] , item.__dict__['laddr'][0]+"@"+str(item.__dict__['laddr'][1]) ,item.__dict__['raddr'][0]+"@"+str(item.__dict__['raddr'][1]),
             item.__dict__['status'])
-    print("\n")
+    print "\n"
